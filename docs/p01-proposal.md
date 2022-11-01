@@ -1,4 +1,6 @@
-# Social background affect on graduation rates Project Proposal
+# Project Name: Social background affect on graduation rates Project Proposal
+
+##### Code Name: Grad-helpers
 
 ## Introduction
 In our project, our goal is to analyze and investigate the effect of intersectionality on system of oppression through examining existing high school graduation rate. For example, the datasets on high school graduates we discovered only included male and female. We want to adapt more diverse pronoun conventions, so we must focus on collecting diverse data on what individuals represent and choose to be. This will support us in resolving the design issue of having limited options for students to identify themselves, which is an act of advocating for equity that will benefit majority of population, a “co-liberation” process. Why do schools and data design have limited student identifiers? We want to enable students' preferences for being addressed and hope to highlight correlation with intersectionality and socioeconomic status.
