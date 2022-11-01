@@ -26,7 +26,7 @@ https://mydata.iowa.gov/Primary-Secondary-Ed/4-Year-High-School-Graduation-Rates
 
 ## The Dataset
 
-![How far can North Korea's Missile Reach?](table.png "Dataset Table")
+![How far can North Korea's Missile Reach?](/docs/table.png "Dataset Table")
 
 For our group’s final project, we will be analyzing and working with datasets of social factors affecting high school graduation rate to further aim to include and represent diversity within gender and race of our target audience, students and academic organizations. We would be looking at data of gender, ethnicity, and social class of graduation rate in US from 2010 - 2019 provided by Statista and Tyler Data & Insights. The datasets will be visualized the number of high school graduates based on race, gender, and class. From analyzing the data, our group will gain knowledge of how much does social factor affect individual’s education opportunity. Our stakeholders are local public boards of education to enable an environment where individuals can equally achieve the same quality of education regardless of their racial, gender, or class background.
 
