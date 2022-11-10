@@ -1,5 +1,12 @@
 # Project Name: Social background affect on graduation rates Project Proposal
 
+# Authors
+Bilal Duale: bduale@uw.edu
+Jesus Vargas: jfv97@uw.edu
+Hannah Wee:  5
+Zonglin Zuo: zonglz2@uw.edu
+
+
 ##### Code Name: Grad-helpers
 
 ## Introduction
