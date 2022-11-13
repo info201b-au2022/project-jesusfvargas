@@ -76,12 +76,11 @@ URL:
 *  Everyone's social, cultural, and experiential backgrounds and perspectives are unique. Thus, there are a great deal of social elements that will influence one person, not all of which will be addressed by our project. However, we will focus on three main social factors (gender identity, racial identity, and social status) in our project.
 
 ## 9. References:
-- https://www.statista.com/statistics/184266/educational-attainment-of-high-school-diploma-or-higher-by-gender/
-- https://www.mhec.org/dashboard/high-school-completion-income
-- https://mydata.iowa.gov/Primary-Secondary-Ed/4-Year-High-School-Graduation-Rates-in-Iowa-by-Coh/xc4x-jnyq
-- https://www.statista.com/statistics/184266/educational-attainment-of-high-school-diploma-or-higher-by-gender/
-- https://mydata.iowa.gov/Primary-Secondary-Ed/4-Year-High-School-Graduation-Rates-in-Iowa-by-Coh/xc4x-jnyq
-- https://www.mhec.org/dashboard/high-school-completion-income
+4-year high school graduation rates in iowa by cohort and race/ethnicity | mydata. Iowa. Gov. (n.d.). Retrieved November 13, 2022, from https://mydata.iowa.gov/Primary-Secondary-Ed/4-Year-High-School-Graduation-Rates-in-Iowa-by-Coh/xc4x-jnyq
+
+High school completion by income | midwestern higher education compact. (n.d.). Retrieved November 13, 2022, from https://www.mhec.org/dashboard/high-school-completion-income
+
+Percentage of U.S. population who have completed high school 1960-2021. (n.d.). Statista. Retrieved November 13, 2022, from https://www.statista.com/statistics/184266/educational-attainment-of-high-school-diploma-or-higher-by-gender/
 
 #### 10. Appendix A: Questions:
 What aspects of our project need to be improved?
