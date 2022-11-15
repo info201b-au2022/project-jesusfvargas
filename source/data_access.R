@@ -178,12 +178,21 @@ data_access_all <- function () {
   income_ethnicity <- full_join(income, ethnicity)
   
   table <- full_join(income_ethnicity, gender)
-  
-  return(table)
+
+  return(list(gender, ethnicity, income))
 }
 
-data_access_table <- function(){
+data_access_gender <- function(){
   data <- data_access_all()
-  return(data)
+  return(data[[1]])
 }
 
+data_access_ethnicity <- function(){
+  data <- data_access_all()
+  return(data[[2]])
+}
+
+data_access_income <- function(){
+  data <- data_access_all()
+  return(data[[3]])
+}
