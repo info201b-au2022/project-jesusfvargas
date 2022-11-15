@@ -1,4 +1,5 @@
 
+table_output <- function(){
   data_2018 <- read.csv('../data/Report_Card_Graduation_2018-19.csv')
   #View(data_2018)
   
@@ -221,7 +222,7 @@
   #View(income_ethnicity)
   
   table <- full_join(income_ethnicity, gender)
-  View(table)
-  
+  return(table)
+}
   
   

@@ -31,6 +31,5 @@ chart3 <- function(income) {
     
     labs(title = "The Average Graduation Rate of social status from 2018 to 2020", 
          x = "Year", y = "Avg_gra_Rate(%) ", caption = "Data Source: Statista")
-    print(chart3)
 }
               

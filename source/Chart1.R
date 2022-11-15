@@ -30,6 +30,5 @@ chart1 <- function(gender) {
   points(Graduate_m, Graduation_Rate_m,col="blue", cex=3)
   points(Graduate_x, Graduation_Rate_x,col="black", cex=3)
   legend("topleft", c("female","male","gender X"), fill=c("red","blue", "black"))
-  print(chart1)
 }
 
