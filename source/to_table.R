@@ -177,7 +177,7 @@
     rename("number_of_students_2018" = "num_g_2018", "avg_grad_rate_2018" = "avg_g_2018",
            "number_of_students_2019" = "num_g_2019", "avg_grad_rate_2019" = "avg_g_2019",
            "number_of_students_2020" = "num_g_2020", "avg_grad_rate_2020" = "avg_g_2020")
-  View(gender)
+  #View(gender)
   
   #join different year data for ethnicity
   ethnicity_num_18_19 <- left_join(num_of_ethnicity_2018, num_of_ethnicity_2019, by="StudentGroup") 
@@ -196,7 +196,7 @@
     rename("number_of_students_2018" = "num_e_2018", "avg_grad_rate_2018" = "avg_e_2018",
            "number_of_students_2019" = "num_e_2019", "avg_grad_rate_2019" = "avg_e_2019",
            "number_of_students_2020" = "num_e_2020", "avg_grad_rate_2020" = "avg_e_2020")
-  View(ethnicity)
+  #View(ethnicity)
   
   #join different year data for income 
   income_num_18_19 <- left_join(num_income_2018, num_income_2019, by="StudentGroup")
@@ -215,4 +215,13 @@
     rename("number_of_students_2018" = "num_i_2018", "avg_grad_rate_2018" = "avg_l_2018",
            "number_of_students_2019" = "num_i_2019", "avg_grad_rate_2019" = "avg_l_2019",
            "number_of_students_2020" = "num_i_2020", "avg_grad_rate_2020" = "avg_l_2020")
-  View(income)
+  #View(income)
+  
+  income_ethnicity <- full_join(income, ethnicity)
+  #View(income_ethnicity)
+  
+  table <- full_join(income_ethnicity, gender)
+  View(table)
+  
+  
+  

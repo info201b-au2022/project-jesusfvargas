@@ -175,20 +175,15 @@ data_access_all <- function () {
     rename("number_of_students_2018" = "num_i_2018", "avg_grad_rate_2018" = "avg_l_2018",
            "number_of_students_2019" = "num_i_2019", "avg_grad_rate_2019" = "avg_l_2019",
            "number_of_students_2020" = "num_i_2020", "avg_grad_rate_2020" = "avg_l_2020")
-  return(list(gender, ethnicity, income))
+  income_ethnicity <- full_join(income, ethnicity)
+  
+  table <- full_join(income_ethnicity, gender)
+  
+  return(table)
 }
 
-data_access_gender <- function(){
+data_access_table <- function(){
   data <- data_access_all()
-  return(data[[1]])
+  return(data)
 }
 
-data_access_ethnicity <- function(){
-  data <- data_access_all()
-  return(data[[2]])
-}
-
-data_access_income <- function(){
-  data <- data_access_all()
-  return(data[[3]])
-}
