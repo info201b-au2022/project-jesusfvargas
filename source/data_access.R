@@ -192,3 +192,4 @@ data_access_income <- function(){
   data <- data_access_all()
   return(data[[3]])
 }
+
