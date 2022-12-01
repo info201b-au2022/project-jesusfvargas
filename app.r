@@ -22,10 +22,11 @@ library(shinythemes)
                ) # mainPanel
                
       ), # Navbar 1, tabPanel
-      tabPanel("Interactive Pages", "Interactive"),
+      tabPanel("Interactive Page 1", "Interactive"),
+      tabPanel("Interactive Page 2", "Interactive"),
+      tabPanel("Interactive Page 3", "Interactive"),
       tabPanel("Summary Takeaways", "Takeaways"),
       tabPanel("Report Page", "Report Page"),
-  
     ) # navbarPage
   ) # fluidPage
 
