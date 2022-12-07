@@ -48,7 +48,7 @@ ui <- fluidPage(theme = shinytheme("cosmo"),
                                selectInput("race_select",
                                              label = h3("Select Race"),
                                              choices = data_access_ethnicity()$StudentGroup,
-                                             selected = "Asian",
+                                             selected = TRUE,
                                              multiple = TRUE)),
                              mainPanel(
                                plotOutput("bar_chart")))),
@@ -65,8 +65,6 @@ ui <- fluidPage(theme = shinytheme("cosmo"),
                                            value = c(2018, 2020))),
                              mainPanel(
                                plotOutput("line_chart")))),
-                  tabPanel("Social Status", 
-                           "Takeaways"),
                   tabPanel("Report Page", "Report Page"),
                 ) # navbarPage
 ) # fluidPage
