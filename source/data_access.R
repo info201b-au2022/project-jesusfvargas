@@ -3,11 +3,11 @@
 # These functions are used to access data sources ... 
 #----------------------------------------------------------------------------#
 data_access_all <- function () {
-  data_2018 <- read.csv('../data/Report_Card_Graduation_2018-19.csv')
+  data_2018 <- read.csv('data/Report_Card_Graduation_2018-19.csv')
   
-  data_2019 <- read.csv('../data/Report_Card_Graduation_2019-20.csv')
+  data_2019 <- read.csv('data/Report_Card_Graduation_2019-20.csv')
   
-  data_2020 <- read.csv('../data/Report_Card_Graduation_2020-21.csv')
+  data_2020 <- read.csv('data/Report_Card_Graduation_2020-21.csv')
   
   library("tidyverse")
   library("dplyr")

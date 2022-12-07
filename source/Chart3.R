@@ -8,24 +8,19 @@ library(ggplot2)
 #source("data_access.R")
 #income <- data_access_income()
   
-chart3 <- function(income) {
+chart3 <- function(input_year) {
     # create a new table
-    datn <- read.table(header=TRUE, text='
-    StudentGroup year rate
-    Low-Income 2018  0.7479852
-    Low-Income 2019  0.7583700
-    Low-Income 2020  0.7659279
-    Non-Low-Income 2018  0.8532674
-    Non-Low-Income 2019  0.8619026
-    Non-Low-Income 2020  0.8631141
-    ')
-    
-    new_rate <- datn$rate * 100
-    datn$new_rate <- new_rate
-    
+  
+  StudentGroup <- c("Low-Income", "Low-Income", "Low-Income", "Non-Low-Income", "Non-Low-Income", "Non-Low-Income")
+  year <- c("2018", "2019", "2020","2018", "2019", "2020")
+  rate <- c( "74.79852", "75.83700", "76.59279", "85.32674", "86.19026", "86.31141")
+  
+data <- data.frame(income, year, rate)
+
+#View(data)
     # create a chart
-    ggplot(data = datn, aes(x = year, y = new_rate, group = StudentGroup , colour = StudentGroup)) +
-      scale_x_continuous(breaks=seq(2018,2020,1)) +
+    ggplot(data = data, aes(x = year, y = rate, group = StudentGroup , colour = StudentGroup)) +
+     # scale_x_continuous(breaks=seq(2018,2020,1)) +
       geom_line() +
       geom_point() +
     
