@@ -37,7 +37,7 @@ ui <- fluidPage(theme = shinytheme("cosmo"),
                              sidebarPanel(
                                selectInput("gender_select",
                                            label = h3("Select Gender"),
-                                           choices = gender$StudentGroup,
+                                           choices = data_access_gender()$StudentGroup,
                                            selected = TRUE)),
                              mainPanel(
                                plotOutput("circle_chart")))

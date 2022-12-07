@@ -15,7 +15,8 @@ server <- shinyServer(function(input, output) {
   })
   
   output$circle_chart <- renderPlot({
-    gender_data <- gender %>%
+  
+    gender_data <- data_access_gender() %>%
       filter(StudentGroup %in% input$gender_select)
     
     Graduate_f <- as.vector(t(gender_data[1,2:4]))
@@ -37,6 +38,9 @@ server <- shinyServer(function(input, output) {
   })
   
   output$bar_chart <- renderPlot({
+    avg_race <- (data_access_ethnicity()%>%
+                   group_by(StudentGroup) %>%
+                   summarise(avg = mean(avg_grad_rate_2018,avg_grad_rate_2019, avg_grad_rate_2020 )))
     
     filter_race <- avg_race %>%
       filter(StudentGroup %in% input$race_select)
@@ -47,14 +51,20 @@ server <- shinyServer(function(input, output) {
   })
   
   output$line_chart <- renderPlot({
+    StudentGroup <- c("Low-Income", "Low-Income", "Low-Income", "Non-Low-Income", "Non-Low-Income", "Non-Low-Income")
+    year <- c("2018", "2019", "2020","2018", "2019", "2020")
+    rate <- c( "74.79852", "75.83700", "76.59279", "85.32674", "86.19026", "86.31141")
+    
+    data <- data.frame(StudentGroup, year, rate)
+    
     data_filter1 <- data %>%
-      filter(income %in% input$select_income)
+      filter(StudentGroup %in% input$select_income)
     
     data_filter <- data_filter1 %>%
       filter(year >= input$year_input[1], year <= input$year_input[2])
       
     ggplot(data = data_filter, 
-           aes(x = year, y = rate, group = income , colour = income)) +
+           aes(x = year, y = rate, group = StudentGroup , colour = StudentGroup)) +
       #scale_x_continuous(breaks=seq(2018,2020,1)) +
       geom_line() +
       geom_point() +
