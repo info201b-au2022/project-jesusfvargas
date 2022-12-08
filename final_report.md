@@ -54,7 +54,7 @@ Citation:
 
 ## 6. The Dataset
 
-![How far can North Korea's Missile Reach?](./docs/tablee.png)
+![How far can North Korea's Missile Reach?](./docs/table.png)
 
 * **Dataset**:
 For our group’s final project, we will be analyzing and working with datasets of social factors affecting high school graduation rate to further aim to include and represent diversity within gender and race of our target audience, students and academic organizations.
