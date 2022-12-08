@@ -31,7 +31,6 @@ server <- shinyServer(function(input, output) {
     #points(Graduate_m, Graduation_Rate_m)
     plot(Graduate_f, Graduation_Rate_f, type='p', main="The Average Graduation Rate of Gender identity from 2018 to 2020", 
          xlab="Number of students", ylab="Different Gender Identity Average Graduation Rate",
-         caption = "Data Source: Statista",
          col="black", cex=3,xlim=c(100,4200), ylim=c(0.5,1))
     points(Graduate_m, Graduation_Rate_m,col="red", cex=3)
     points(Graduate_x, Graduation_Rate_x,col="seagreen4", cex=3)

@@ -68,8 +68,8 @@ ui <- fluidPage(theme = shinytheme("cosmo"),
                                            value = c(2018, 2020))),
                              mainPanel(
                                plotOutput("line_chart")))),
-                  tabPanel("Social Status", 
-                           "Takeaways"),
+                  tabPanel("Summary Takeaways", 
+                           includeMarkdown("summary_takeaways.md")),
                   tabPanel("Report Page", 
                            includeMarkdown("final_report.md")),
                 
