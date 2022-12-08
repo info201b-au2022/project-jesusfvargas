@@ -3,22 +3,23 @@
 # high school students who graduate?
 library(ggplot2)
 library(hrbrthemes)
+source("source/data_access.R")
 
 # import the gender data
 
-chart1 <- function(gender) {
+chart1 <- function() {
 
   #number_of_students_2018 
   #number_of_students_2019 
   #number_of_students_2020
   
-  Graduate_f <- as.vector(t(gender[1,2:4]))
-  Graduate_m <- as.vector(t(gender[3,2:4]))
-  Graduate_x <- as.vector(t(gender[2,2:4]))
+  Graduate_f <- as.vector(t(data_access_gender()[1,2:4]))
+  Graduate_m <- as.vector(t(data_access_gender()[3,2:4]))
+  Graduate_x <- as.vector(t(data_access_gender()[2,2:4]))
   
-  Graduation_Rate_f <- as.vector(t(gender[1,5:7]))
-  Graduation_Rate_m <- as.vector(t(gender[3,5:7]))
-  Graduation_Rate_x <- as.vector(t(gender[2,5:7]))
+  Graduation_Rate_f <- as.vector(t(data_access_gender()[1,5:7]))
+  Graduation_Rate_m <- as.vector(t(data_access_gender()[3,5:7]))
+  Graduation_Rate_x <- as.vector(t(data_access_gender()[2,5:7]))
   
   
   plot(Graduate_f, Graduation_Rate_f, type='p', main="Gender identity", 

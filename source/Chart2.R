@@ -2,6 +2,7 @@
 # Q2: How does one's racial identity affect the  
 # percentage of high school students who graduate?
 library(ggplot2)
+source("source/data_access.R")
 
 # import the ethnicity data
 #source("data_access.R")
@@ -11,7 +12,7 @@ library(ggplot2)
 # calculate the avg_gra_rate
 #ethnicity <- data_access_ethnicity()
 
-chart2 <- function(race) {
+chart2 <- function() {
   avg_race <- (data_access_ethnicity()%>%
                  group_by(StudentGroup) %>%
                  summarise(avg = mean(avg_grad_rate_2018,avg_grad_rate_2019, avg_grad_rate_2020 )))

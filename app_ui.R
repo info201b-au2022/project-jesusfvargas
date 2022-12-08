@@ -65,6 +65,8 @@ ui <- fluidPage(theme = shinytheme("cosmo"),
                                            value = c(2018, 2020))),
                              mainPanel(
                                plotOutput("line_chart")))),
+                  tabPanel("Social Status", 
+                           "Takeaways"),
                   tabPanel("Report Page", "Report Page"),
                 ) # navbarPage
 ) # fluidPage

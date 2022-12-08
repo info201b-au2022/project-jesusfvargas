@@ -3,19 +3,20 @@
 # from high school, and is it possible to judge that the prevalence of 
 # education is closely related to the social status of family members?
 library(ggplot2)
+source("source/data_access.R")
 
 # import income data
 #source("data_access.R")
 #income <- data_access_income()
   
-chart3 <- function(input_year) {
+chart3 <- function() {
     # create a new table
   
   StudentGroup <- c("Low-Income", "Low-Income", "Low-Income", "Non-Low-Income", "Non-Low-Income", "Non-Low-Income")
   year <- c("2018", "2019", "2020","2018", "2019", "2020")
   rate <- c( "74.79852", "75.83700", "76.59279", "85.32674", "86.19026", "86.31141")
   
-data <- data.frame(income, year, rate)
+data <- data.frame(StudentGroup, year, rate)
 
 #View(data)
     # create a chart

@@ -1,4 +1,7 @@
 
+source("source/data_access.R")
+data <- data_access_ethnicity()
+
 summary <- function(data){
   summary_info <- list()
   summary_info$num_observations <- nrow(data)

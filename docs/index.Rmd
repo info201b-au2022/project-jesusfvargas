@@ -89,10 +89,8 @@ URL:
 ## Summary Paragraph
 
 ```{r summary,echo = FALSE, message=FALSE, warning=FALSE,results='asis'}
-source("source/data_access.R")
-source("source/summary_script.R")
-data <- data_access_ethnicity()
-summary(data)
+source("../source/summary_script.R")
+summary()
 ```
 
 
@@ -101,7 +99,7 @@ summary(data)
 ```{r table, echo = FALSE, message=FALSE, warning=FALSE,results='asis'}
 library(data.table)
 library(knitr)
-source("source/to_table.R")
+source("../source/to_table.R")
 kable(table_output())
 ```
 The high school graduation rate datasets we discovered was from 2019-2020. We first counted the number of individual data sets for each student group for 2018, "number_of_student_2018" to 2020, "number_of_student_2020". The students counted were from United States specifically and it was first organized to three different table for gender, ethnicity, and low-income to create separate visual representation for each of the following categories. Then to represent graduation rate of each "StudentGroup" graduation rate was calculated from 2018, "avg_grad_rate_2018" to 2020, "avg_grad_rate_2020".
@@ -110,10 +108,8 @@ The high school graduation rate datasets we discovered was from 2019-2020. We fi
 ```{r chart1, echo = FALSE, message=FALSE, warning=FALSE}
 library(ggplot2)
 library(hrbrthemes)
-source("source/data_access.R")
-source("source/Chart1.R")
-gender <- data_access_gender()
-chart1(gender)
+source("../source/Chart1.R")
+chart1()
 ```
 
 This graph clearly illustrates the correlation between the distributions. The graph reveals that although there are more male students, their graduation rate is not as high as that of female students; in addition, the number of students belonging to other gender groups is low, as is their graduation rate. Therefore, more tabular data may determine that women are more intelligent.
@@ -121,10 +117,8 @@ This graph clearly illustrates the correlation between the distributions. The gr
 ## Chart 2
 ```{r chart2, echo = FALSE, message=FALSE, warning=FALSE}
 library(ggplot2)
-source("source/data_access.R")
-source("source/Chart2.R")
-ethnicity <- data_access_ethnicity()
-chart2(ethnicity)
+source("../source/Chart2.R")
+chart2()
 ```
 
 This chart was selected because it clearly demonstrates a shift in the average graduation rate, as well as a flat state. The relationship between graduation rate and race is depicted in Figure 2. The graph reveals that Asian Americans have the greatest graduation rate, American Indians have the lowest, and the other student groups have nearly the same graduation rate. It is demonstrable that Asian-American student groups study diligently.
@@ -132,10 +126,8 @@ This chart was selected because it clearly demonstrates a shift in the average g
 ## Chart 3
 ```{r chart3, echo = FALSE, message=FALSE, warning=FALSE}
 library(ggplot2)
-source("source/data_access.R")
-source("source/Chart3.R")
-income <- data_access_income()
-chart3(income)
+source("../source/Chart3.R")
+chart3()
 ```
 
 This chart clearly illustrates a shifting trend and the phenomena of graduation. The chart reveals that the graduation rate of students with high income, i.e., a higher social class, is significantly higher than the graduation rate of students with low income, indicating that social class and education level are related and that people with higher income will spend more time on education. Nevertheless, it is evident that both variables belong to an increasing trend.
