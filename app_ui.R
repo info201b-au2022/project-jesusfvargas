@@ -10,30 +10,9 @@ ui <- fluidPage(theme = shinytheme("cosmo"),
                   # theme = "cosmo",  # <--- To use a theme, uncomment this
                   "Social Background Affects on Graduation Rates:",
                   tabPanel("Introdution",
-                           sidebarPanel("Grade-helpers"
-                           ), # sidebarPanel
-                           mainPanel(
-                             h1("Introduction"),
-                             h3("What is the study about?"),
-                             p("In our project, our goal is to analyze and investigate the effect of 
-                               intersectionality on system of oppression through examining existing 
-                               high school graduation rate. For example, the datasets on high school 
-                               graduates we discovered only included male and female. We want to 
-                               adapt more diverse pronoun conventions, so we must focus on collecting 
-                               diverse data on what individuals represent and choose to be. This 
-                               will support us in resolving the design issue of having limited options 
-                               for students to identify themselves, which is an act of advocating for 
-                               equity that will benefit majority of population, a “co-liberation” process."),
-                             h3("Guiding questions as we conducted the study: "),
-                             p("We developed three guiding questions for each social status and then answerd
-                               the questions with different types of graph and interactions with shiny 
-                               widget:"),
-                             p("How does high school graduation rate vary depending on gender identity?"),
-                             p("Does race identity of a student impact high school graduation rate?"),
-                             p("Is there a correlation between high school graduation rate and income?"),
-                             verbatimTextOutput("txtout"),
-                             
-                           ) # mainPanel
+                           
+                           includeMarkdown("introduction_part.md" # sidebarPanel
+                             ) # mainPanel
                            
                   ), # Navbar 1, tabPanel
                 #Gender Indentity
