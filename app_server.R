@@ -29,10 +29,12 @@ server <- shinyServer(function(input, output) {
     
     #plot(Graduate_f, Graduation_Rate_f,type='p') 
     #points(Graduate_m, Graduation_Rate_m)
-    plot(Graduate_f, Graduation_Rate_f, type='p', main="Gender identity", 
-         xlab="numer_of_students", ylab="Av g_gra_Rate", col="black", cex=3,xlim=c(100,4200), ylim=c(0.5,1))
-    points(Graduate_m, Graduation_Rate_m,col="black", cex=3)
-    points(Graduate_x, Graduation_Rate_x,col="black", cex=3)
+    plot(Graduate_f, Graduation_Rate_f, type='p', main="The Average Graduation Rate of Gender identity from 2018 to 2020", 
+         xlab="Number of students", ylab="Different Gender Identity Average Graduation Rate",
+         caption = "Data Source: Statista",
+         col="black", cex=3,xlim=c(100,4200), ylim=c(0.5,1))
+    points(Graduate_m, Graduation_Rate_m,col="red", cex=3)
+    points(Graduate_x, Graduation_Rate_x,col="seagreen4", cex=3)
     #points(Graduate_x, Graduation_Rate_x,Graduate_f, Graduation_Rate_f, Graduate_m,Graduation_Rate_m  col="black", cex=9)
     #legend("topleft", c("female","male","gender X"), fill=c("red","blue", "black"))
   })
@@ -47,7 +49,7 @@ server <- shinyServer(function(input, output) {
     ggplot(data=filter_race, 
            aes(x= StudentGroup, y=avg, fill = StudentGroup)) +
       geom_bar(stat="identity") + labs(title = "The Average Graduation Rate of Racial Identity from 2018 to 2020", 
-                                       x = "Student Group", y = "Avg_grad_Rate(%) ", caption = "Data Source: Statista")
+                                       x = "Student Group", y = "Average graduation Rate(%)", caption = "Data Source: Statista")
   })
   
   output$line_chart <- renderPlot({
@@ -68,8 +70,8 @@ server <- shinyServer(function(input, output) {
       #scale_x_continuous(breaks=seq(2018,2020,1)) +
       geom_line() +
       geom_point() +
-      labs(title = "The Average Graduation Rate of social status from 2018 to 2020", 
-           x = "Year", y = "Avg_grad_Rate(%) ", caption = "Data Source: Statista")
+      labs(title = "The Average Graduation Rate of social status", 
+           x = "Year", y = "Average graduation Rate(%) ", caption = "Data Source: Statista")
   })
 }) # server
 

@@ -38,7 +38,8 @@ ui <- fluidPage(theme = shinytheme("cosmo"),
                                selectInput("gender_select",
                                            label = h3("Select Gender"),
                                            choices = data_access_gender()$StudentGroup,
-                                           selected = TRUE)),
+                                           selected = TRUE,
+                                           multiple = TRUE)),
                              mainPanel(
                                plotOutput("circle_chart")))
                            ),
@@ -56,8 +57,10 @@ ui <- fluidPage(theme = shinytheme("cosmo"),
                            sidebarLayout(
                              sidebarPanel(
                                selectInput("select_income",
-                                           label = h3("Select income"),
-                                           choices = c("Low-Income", "Non-Low-Income")),
+                                           label = h3("Select income group"),
+                                           choices = c("Low-Income", "Non-Low-Income"),
+                                           selected = TRUE,
+                                           multiple = TRUE),
                                sliderInput("year_input",
                                            label = h3("Select Year"),
                                            min = 2018, 
@@ -67,6 +70,8 @@ ui <- fluidPage(theme = shinytheme("cosmo"),
                                plotOutput("line_chart")))),
                   tabPanel("Social Status", 
                            "Takeaways"),
-                  tabPanel("Report Page", "Report Page"),
+                  tabPanel("Report Page", 
+                           includeMarkdown("final_report.md")),
+                
                 ) # navbarPage
 ) # fluidPage
