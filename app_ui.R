@@ -14,6 +14,7 @@ ui <- fluidPage(theme = shinytheme("cosmo"),
                            ), # sidebarPanel
                            mainPanel(
                              h1("Introduction"),
+                             h3("What is the study about?"),
                              p("In our project, our goal is to analyze and investigate the effect of 
                                intersectionality on system of oppression through examining existing 
                                high school graduation rate. For example, the datasets on high school 
@@ -22,10 +23,14 @@ ui <- fluidPage(theme = shinytheme("cosmo"),
                                diverse data on what individuals represent and choose to be. This 
                                will support us in resolving the design issue of having limited options 
                                for students to identify themselves, which is an act of advocating for 
-                               equity that will benefit majority of population, a “co-liberation” process.
-                               Why do schools and data design have limited student identifiers? We want
-                               to enable students' preferences for being addressed and hope to highlight
-                               correlation with intersectionality and socioeconomic status."),
+                               equity that will benefit majority of population, a “co-liberation” process."),
+                             h3("Guiding questions as we conducted the study: "),
+                             p("We developed three guiding questions for each social status and then answerd
+                               the questions with different types of graph and interactions with shiny 
+                               widget:"),
+                             p("How does high school graduation rate vary depending on gender identity?"),
+                             p("Does race identity of a student impact high school graduation rate?"),
+                             p("Is there a correlation between high school graduation rate and income?"),
                              verbatimTextOutput("txtout"),
                              
                            ) # mainPanel
@@ -41,6 +46,7 @@ ui <- fluidPage(theme = shinytheme("cosmo"),
                                            selected = TRUE,
                                            multiple = TRUE)),
                              mainPanel(
+                               h4("How does high school graduation rate vary depending on gender identity?"),
                                plotOutput("circle_chart")))
                            ),
                   tabPanel("Racial Identity", 
@@ -52,6 +58,7 @@ ui <- fluidPage(theme = shinytheme("cosmo"),
                                              selected = TRUE,
                                              multiple = TRUE)),
                              mainPanel(
+                               h4("Does race identity of a student impact high school graduation rate?"),
                                plotOutput("bar_chart")))),
                   tabPanel("Income Identity", 
                            sidebarLayout(
@@ -67,6 +74,7 @@ ui <- fluidPage(theme = shinytheme("cosmo"),
                                            max = 2020, 
                                            value = c(2018, 2020))),
                              mainPanel(
+                               h4("Is there a correlation between high school graduation rate and income?"),
                                plotOutput("line_chart")))),
                   tabPanel("Summary Takeaways", 
                            includeMarkdown("summary_takeaways.md")),
